@@ -317,14 +317,30 @@
         const textMensagem = $("#mensagem")
 
         // determinando a quantidade de caracteres
-        let quantidade = 100
+        let quantidade = 100;
 
         // ouvinte de evento
         textMensagem.on("input", function(){
 
+            
             let conteudo = textMensagem.val();
-            var contagem = contagem - conteudo.length
-        })
+            let contagem = quantidade - conteudo.length
+           
+            // console.log(contagem)
+
+            // exibindo o numero no HTML
+
+            bCaracteres.text(contagem);
+
+
+            if(contagem == 0) {
+                spanMaximo.css('color', 'red');
+                spanMaximo.text("limite de caracteres alcançado"); 
+            } else {
+                spanMaximo.css('color', 'black');
+                spanMaximo.html("(restam <b id='caracteres'>" +contagem+ "</b> caracteres)");
+            }
+        });
         </script>
 </body>
 </html>
