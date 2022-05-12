@@ -10,6 +10,8 @@
     <meta name="description" content="Simplicity é a maneira mais facil de você entrar no mundo de desenvolvimento front-end">
     <meta name="keywords" content="front-end, HTML, css, js">
     <link rel="stylesheet" href="css/estilo.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 </head>
 <body>
     <!-- iniciando area do cabeçalho -->
@@ -49,11 +51,13 @@
                 <h2>HTML5 e CSS3</h2>
                 <p>A porta de entrada para o desenvolvimento web.</p>
         </div>
-        </section>
-         slider 
-        <section class="slider">
-
         </section> -->
+         
+        <section class="slider">
+            <div><img src="imagens/slide1.jpg" alt=""></div>
+            <div><img src="imagens/slide2.jpg" alt=""></div>
+            <div><img src="imagens/slide3.jpg" alt=""></div>
+        </section> 
 
         <!-- area de conteudo de texto + 3 imagens -->
 
@@ -96,9 +100,13 @@
     <script src="js/menu.js"></script>
 
     <!-- BXSLIDER -->
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-
-    <link rel="stylesheet" href="plugins/bxslider/jquery.bxslider.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider();
+    });
+  </script>
 </body>
 </html>
